@@ -10,12 +10,14 @@ const creds = username + ":" + password;
 
 const app = express();
 
+app.use(express());
+
 app.get('/', (req, res) => {
     res.send('Hello from Node API server... ' + Date.now());
 });
 
 
-
+//Database
 // mongoose.connect('mongodb+srv://harrisbobiot:AdMiNPaSsWoRd@mensterdb.jmlbp.mongodb.net/?retryWrites=true&w=majority&appName=mensterDB').then(() => console.log('MongoDB connected')).catch(err => console.log(err));
 
 mongoose.connect('mongodb+srv://harrisbobiot:AdMiNPaSsWoRd@mensterdb.jmlbp.mongodb.net/?retryWrites=true&w=majority&appName=mensterDB')
